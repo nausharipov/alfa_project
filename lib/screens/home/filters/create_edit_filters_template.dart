@@ -103,11 +103,9 @@ class _CreateEditFilterTemplateScreenState
               children: [
                 LayoutBuilder(builder:
                     (BuildContext context, BoxConstraints constraints) {
-                  return Padding(
-                    padding: EdgeInsets.symmetric(
-                        vertical: storyBloc.getIsStoryTemplate
-                            ? 0
-                            : constraints.maxHeight * 0.15),
+                  return AspectRatio(
+                    aspectRatio: 9 / 16, // for stories
+                    // 4 / 5 for poster
                     child: RepaintBoundary(
                       key: globalKey,
                       child: Container(
